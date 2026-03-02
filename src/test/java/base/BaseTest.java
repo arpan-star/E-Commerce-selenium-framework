@@ -26,12 +26,11 @@ public class BaseTest {
 
     protected WebDriver driver;
     ConfigReader config;
-    protected ExtentReports extent;
+    protected static ExtentReports extent = ExtentManager.getInstance();
     protected ExtentTest test;
     
     @BeforeSuite
     public void setupReporter() {
-    	extent = ExtentManager.getInstance();
     	
     	extent.setSystemInfo("Project", "E-Commerce E2E flow");
         extent.setSystemInfo("Tester", "Arpan Mahapatra");
